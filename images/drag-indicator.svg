@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/drag-indicator</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon/drag-indicator">
+            <path d="M15.1979405,8.8795774 L11.7177371,5.40123583 C11.3969681,5.08046684 11.3969681,4.56088551 11.7177371,4.24057674 C12.0385061,3.91980775 12.5580874,3.91980775 12.8788564,4.24057674 L17.7594233,9.1211436 C18.0801922,9.44145237 18.0801922,9.96149392 17.7594233,10.2822629 L12.8788564,15.1628298 C12.7256052,15.3174616 12.5171284,15.404442 12.2994473,15.404442 C11.8461367,15.4081237 11.4752044,15.0440946 11.4710625,14.5907841 C11.4692217,14.3675804 11.5585031,14.1531208 11.7177371,13.9971083 L15.1970361,10.5211599 L3.82102134,10.5211599 C3.36771079,10.5211599 3,10.1539093 3,9.70013852 C3,9.24682798 3.36771079,8.8795774 3.82102134,8.8795774 L15.1979405,8.8795774 Z" id="Combined-Shape" fill="#979797" transform="translate(10.500000, 9.702235) rotate(-90.000000) translate(-10.500000, -9.702235) "></path>
+            <path d="M0.5,19.5 L19.5,19.5" id="Line-3" stroke="#979797" stroke-linecap="square"></path>
+        </g>
+    </g>
+</svg>
