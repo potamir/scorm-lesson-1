@@ -1,3 +1,9 @@
+try {
+  document.domain = location.hostname === "localhost" ? "localhost" : "satukelas.space";
+} catch (error) {
+  console.log(error);
+}
+
 const Adapter = {
   onScore: function (score) {
     // add HTTP call to save percentage score here
