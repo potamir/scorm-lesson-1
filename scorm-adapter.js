@@ -6,7 +6,9 @@ try {
 }
 
 const urlScorm = "scorm/index.html?id=" + window.location.search.substring(4);
-document.getElementById("sco").src = urlScorm;
+document.getElementById(
+  "iframeWrapper"
+).innerHTML = `<iframe id="sco" src=${urlScorm} width="100%" height="600px"></iframe>`;
 
 const Adapter = {
   onScore: function (score) {
