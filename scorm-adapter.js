@@ -1,8 +1,12 @@
 try {
-  document.domain = location.hostname === "localhost" ? "localhost" : "satukelas.space";
+  document.domain =
+    location.hostname === "localhost" ? "localhost" : "satukelas.space";
 } catch (error) {
   console.log(error);
 }
+
+const urlScorm = "scorm/index.html?id=" + window.location.search.substring(4);
+document.getElementById("sco").src = urlScorm;
 
 const Adapter = {
   onScore: function (score) {
@@ -64,3 +68,7 @@ window.API = {
     return "";
   },
 };
+
+/**
+ * suspend data harusnya isi nya kayak gini: {"currentSection":0,"currentStage":0,"type":"attempt","score":57,"score_detail":{"scores":[{"correct":22,"total":50,"title":"Section 1: Listening Comprehension","score":44},{"correct":28,"total":40,"title":"Section 2: Structure and Written Expression","score":70},{"correct":30,"total":50,"title":"Section 3: Reading","score":60}]},"sha":"1@CDXf+O11VqjG5+ApNXbXK42IRJ4DscPX9D+Z90nloAU=","activity_name":"reading","section":3,"stage":0,"activity":5,"interaction":9,"timestamp":"2022-04-09T07:42:30.053
+ */

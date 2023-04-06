@@ -4,21 +4,30 @@
     <meta charset="utf-8" />
     <title>Reallyenglish</title>
     <link rel="stylesheet" type="text/css" href="./rels-lib.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
   </head>
   <body>
     <div id="app">
-      <div style="position:relative" class="l-loading-indicator t-loading-indicator"></div>
+      <div
+        style="position: relative"
+        class="l-loading-indicator t-loading-indicator"
+      ></div>
     </div>
     <script>
       try {
-        document.domain = location.hostname === "localhost" ? "localhost" : "satukelas.space";
+        document.domain =
+          location.hostname === "localhost" ? "localhost" : "satukelas.space";
       } catch (error) {
         console.log(error);
       }
-      let lesson_id=2799646;
-      let language="en";
-      let fast_forward=true;
+      // var url = new URL(url_string);
+      // var c = url.searchParams.get("c");
+      let lesson_id = window.location.search.substring(4);
+      let language = "en";
+      let fast_forward = true;
     </script>
     <script src="./vendor.js"></script>
     <script src="./main.js"></script>
