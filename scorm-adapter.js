@@ -5,7 +5,8 @@ try {
   console.log(error);
 }
 
-const urlScorm = "scorm/index.html?id=" + window.location.search.substring(4);
+const qsa = window.location.search.split("&");
+const urlScorm = "scorm/index.html?id=" + qsa[0].substring(10);
 document.getElementById(
   "iframeWrapper"
 ).innerHTML = `<iframe id="sco" src=${urlScorm} width="100%" height="600px"></iframe>`;
@@ -14,18 +15,33 @@ const Adapter = {
   onScore: function (score) {
     // add HTTP call to save percentage score here
     console.log("score:" + score);
-    alert("score:" + score);
-    window.close();
+    // alert("score:" + score);
+    myHeaders = new Headers({
+      Authorization: "Basic " + qsa[1].substring(6),
+      "Content-Type": "application/json",
+    });
+    fetch("https://api.satukelas.space/api/v2/scorms/score", {
+      headers: myHeaders,
+      method: "POST",
+      body: JSON.stringify({
+        id: qsa[2].substring(3),
+        score: score,
+      }),
+    })
+      .then((res) => res.json())
+      .then((finalRes) => console.log(finalRes));
   },
 
   onSuspendData: function (data) {
     // add HTTP call to save TOEIC score details here
-    alert("suspend data: " + data);
+    // alert("suspend data: " + data);
+    // window.top.postMessage(JSON.stringify(data), "*");
   },
 
   onSessionTime: function (time) {
     // add HTTP call to set study time here
-    alert("session time: " + time);
+    // alert("session time: " + time);
+    // window.top.postMessage(time, "*");
   },
 };
 
