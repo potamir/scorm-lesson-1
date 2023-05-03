@@ -9,7 +9,7 @@ const qsa = window.location.search.split("&");
 const urlScorm = "scorm/index.html?id=" + qsa[0].substring(10);
 document.getElementById(
   "iframeWrapper"
-).innerHTML = `<iframe id="sco" src=${urlScorm} width="100%" height="600px"></iframe>`;
+).innerHTML = `<iframe id="sco" src=${urlScorm} width="100%" height="600px" allow="microphone" ></iframe>`;
 
 const Adapter = {
   onScore: function (score) {
